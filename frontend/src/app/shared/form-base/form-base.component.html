@@ -3,7 +3,7 @@
     <form [formGroup]="cadastroForm">
       <mat-card-title> Crie sua conta </mat-card-title>
       <section>
-        <div class="acoesPerfil">
+        <div class="acoesPerfil" *ngIf="perfilComponent">
           <h2>Dados pessoais</h2>
           <button mat-stroked-button color="primary">
             <mat-icon>logout</mat-icon>
@@ -98,8 +98,8 @@
           </div>
         </div>
       </mat-card-content>
-      <mat-divider></mat-divider>
-      <div class="acessoPerfil">
+      <mat-divider *ngIf="perfilComponent"></mat-divider>
+      <div class="acessoPerfil" *ngIf="perfilComponent">
         <h2>Dados de acesso</h2>
       </div>
       <mat-card-content>
@@ -153,6 +153,10 @@
                 *ngIf="cadastroForm.get('confirmarEmail')?.errors?.['email']"
                 >E-mail inválido</mat-error
               >
+              <mat-error
+                *ngIf="cadastroForm.get('confirmarEmail')?.errors?.['equalTo']"
+                >E-mails não coincidem</mat-error
+              >
             </mat-form-field>
             <mat-form-field appearance="outline">
               <mat-label>Confirmar Senha</mat-label>
@@ -165,6 +169,10 @@
               <mat-error
                 *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['required']"
                 >Confirmação de Senha é obrigatória</mat-error
+              >
+              <mat-error
+                *ngIf="cadastroForm.get('confirmarSenha')?.errors?.['equalTo']"
+                >Senhas não coincidem</mat-error
               >
             </mat-form-field>
           </div>
@@ -186,6 +194,7 @@
       </mat-card-content>
       <mat-card-actions class="full-width">
         <button
+          (click)="executarAcao()"
           mat-flat-button
           [disabled]="cadastroForm.invalid"
           color="primary"
