@@ -20,7 +20,7 @@
 
 ## :books: Sobre
 
-O Jornada milhas é uma aplicação que permite comprar passagens aéreas.
+O Jornada milhas é uma aplicação que permite comprar passagens aéreas utilizando milhas.
 
 O curso explora a componentização com Angular Material, controlar e validar formulários em Angular utilizando serviços e manipular dados de APIs.
 
