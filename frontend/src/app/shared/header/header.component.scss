@@ -4,25 +4,6 @@
     margin: 0 16px;
   }
 
-  img:hover{
-    cursor: pointer;
-  }
-
-  .button{
-    width: 94px;
-    height: 36px;
-    border-radius: 5px;
-    border: 1px solid #6750A4;
-    opacity: 0px;
-    color: #6750A4;
-    font-weight: bold;
-    background-color: #1D1B20;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
   .spacer {
     flex: 1 1 auto;
   }
@@ -33,8 +14,24 @@
     padding: 0 256px;
   }
 
-  .mat-mdc-outlined-button:not(:disabled) {
-    border-color: white;
+  .links-toolbar > * {
+    margin-right: 20px;
   }
+
+  .links-toolbar > *:first-child {
+    margin-right: 0;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+
+  .mat-mdc-outlined-button:not(:disabled) {
+    border-color: #673ab7;
+    color: #673ab7;
+  }
+
 }
+
+
 
