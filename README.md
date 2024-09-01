@@ -22,7 +22,7 @@
 
 O Jornada milhas é uma aplicação que permite comprar passagens aéreas utilizando milhas.
 
-O curso explora a componentização com Angular Material, controlar e validar formulários em Angular utilizando serviços e manipular dados de APIs.
+Neste curso construímos as telas de login, cadastro e edição de perfil, tudo isso usando componentes reutilizáveis. Além disso, implementamos boas práticas do Angular com o Interceptor e a Guarda de Rota. Também manipulamos token e trabalhamos com a autenticação usando o JWT.
 
 [Figma da aplicação](https://www.figma.com/design/SI696t31Q9zlsXKttCoqKP/Angular%3A-Componentiza%C3%A7%C3%A3o-e-Design-com-Angular-Material-%7C-Jornada-Milhas?node-id=0-1&t=GqXifEzZXjxSSVUY-0)
 
